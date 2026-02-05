@@ -1,5 +1,5 @@
 #   1.pandas
-
+# from multiprocessing.connection import default_family
 
 # import pandas as pd
 #
@@ -61,20 +61,34 @@
 
 
 
-# 05.Iterating Columns in a Dataframe
+# # 05.Iterating Columns in a Dataframe
+#
+# # import  pandas as pd
+# #
+# #
+# # data = {'Name':['jal','princi','Gavruv','anju'],
+# #         'Age':[27,24,22,32],
+# #         'Address':['Delhi','kanpur','Allahabad','kannauj'],
+# #         'Qualification':['Msc','MA','MCA','phd']
+# #        }
+#
+#
+# df = pd.DataFrame(data)
+# print(df)
+#
+# for i in df.index:
+#     print(df.Address[i])
 
-import  pandas as pd
+
+# machine learning  (Linear Regression-part-3)
 
 
-data = {'Name':['jal','princi','Gavruv','anju'],
-        'Age':[27,24,22,32],
-        'Address':['Delhi','kanpur','Allahabad','kannauj'],
-        'Qualification':['Msc','MA','MCA','phd']
-       }
+import pandas as pd
+import matplotlib
+matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
 
-
-df = pd.DataFrame(data)
+df = pd.read_csv("Linear_Regression.csv")
 print(df)
-
-for i in df.index:
-    print(df.Address[i])
+plt.scatter(df['Area'],df['price'])
+plt.show()
